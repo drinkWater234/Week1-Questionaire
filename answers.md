@@ -9,14 +9,40 @@ An optinal is a property of a variable/constant. Variables/constants must have a
 
 ## What is optional chaining vs optional binding?
 
+Optional chaining is a way to query properties, method on an optional that may be nil. If the optional is non-nil, the property or method query return thevalue, if the optional is nil, the property or method return a nil. By chaining multiple queries together, we can handle any fails if any of the link in the chain results in a nil. Optional chaining can be done by placing the question mark after the optional value on a property or method. The type of the return value from optional chaining is always an optional value. 
 
 ## What are the different ways to unwrap an optional? How do they work? Are they safe?
 
-* Using if else block
-* Forced unwrapping
-* Optinal binding within if block
+* Using force unwrap
+For example:
+```
+var x: Int? = 5
+print("\(x!)")
+```
+In the code above, the exlamation point at the end of the optional's name is used to force unwrap the optional. Generally using forced unwrapping is unsafe if you do not know whether the optional contains a value or a nil. It is important to note that if you force unwrap optional that contains nil, the code will trigger a runtime error.
+
+* Optinal binding
+For example:
+```
+var x: Int? = 5
+if let y = x
+{
+	print("The value of x is: \(y)")	
+}
+```
+In the code above optional binding is used to unwrap the optional variable x. Optional binding is a safe way to unwrap an optional because it checks whether the optional contains a value or nil.
+
 * Optional chaining
+Optionals may be unwrapped with optional chaining. See the section *What is optional chaining vs optional binding?* section for the explanation on how it works. Optional chaining is a safe way to unwrap an optional because it checks whether or not the optional is nil.
+
+
 * Using nil-coalescing operator
+For example:
+```
+var x: String? = "Hello World"
+print("\(x ?? "Water")")
+```
+The nil-coalescing operator is a binary operator in the form of: A ?? B. Where A is an optional type, and B is a the same type of A (which does not need to be an optional). The nil-coalescing operator unwraps the optional A it if contians a value, else, it returns the value B. It is important to note that, if A is non-nill, the B is not evaluated. Essentially, the expression A ?? B is equivalent to: a != nil ? a! : b. With that said, using nil-coalescing operator to unwrap an optional is safe because it checks wether or not the optional is a nil.
 
 
 ## What is a closure?
