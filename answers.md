@@ -76,7 +76,10 @@ e.g: (Int, String, Float)
 
 ## What is Any vs AnyObject?
 
-Any is a keyword that represents any type.
+Any is a keyword that represents any type.  
 AnyObject is a keyword that represents an instance of any class type.
 
 ## What is a protocol?
+
+A protocol contains the requirements that pertains to a related functionality. The protocol can then be used by a class, structure, or enumeration to provide the implementation of the specified requirements required by the protocol. 
+
