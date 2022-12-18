@@ -15,7 +15,7 @@ Optional chaining is a way to query properties, method on an optional that may b
 
 ### Force unwrapping
 For example:  
-```
+```swift
 var x: Int? = 5
 print("\(x!)")
 ```
@@ -36,7 +36,7 @@ In the code above optional binding is used to unwrap the optional variable x. Op
 Optionals may be unwrapped with optional chaining. See the section *What is optional chaining vs optional binding?* section for the explanation on how it works. Optional chaining is a safe way to unwrap an optional because it checks whether or not the optional is nil.
 
 
-### nil-coalescing operator
+### Nil-coalescing operator
 For example:  
 ```
 var x: String? = "Hello World"
