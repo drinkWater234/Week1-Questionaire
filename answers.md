@@ -23,7 +23,7 @@ In the code above, the exlamation point at the end of the optional's name is use
 
 ### Optinal binding
 For example:  
-```
+```swift
 var x: Int? = 5
 if let y = x
 {
@@ -38,7 +38,7 @@ Optionals may be unwrapped with optional chaining. See the section *What is opti
 
 ### Nil-coalescing operator
 For example:  
-```
+```swift
 var x: String? = "Hello World"
 print("\(x ?? "Water")")
 ```
