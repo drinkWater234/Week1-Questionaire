@@ -61,8 +61,9 @@ The main difference between a class and a struct is that: a class is of referenc
 ## What is the syntax '??' do?
 
 ?? is the nil-coalescing operator. It is a binary operator. The syntax is given as:
-
+```swift
 a ?? b
+```
 
 where a is an optional type, and b is the same type as a, however is not required to be an optional. The ?? operator will unwrap the operand a if it is not nil, or return the operand b, if a is nil. 
 
