@@ -1,6 +1,6 @@
 ## What is the difference between var and let?
 
-var is keyword used to declare a variable.
+var is keyword used to declare a variable.  
 let is keyword used to declare a constant.
 
 ## What is an optional?
@@ -14,7 +14,7 @@ Optional chaining is a way to query properties, method on an optional that may b
 ## What are the different ways to unwrap an optional? How do they work? Are they safe?
 
 * Using force unwrap
-For example:
+For example:  
 ```
 var x: Int? = 5
 print("\(x!)")
@@ -22,7 +22,7 @@ print("\(x!)")
 In the code above, the exlamation point at the end of the optional's name is used to force unwrap the optional. Generally using forced unwrapping is unsafe if you do not know whether the optional contains a value or a nil. It is important to note that if you force unwrap optional that contains nil, the code will trigger a runtime error.
 
 * Optinal binding
-For example:
+For example:  
 ```
 var x: Int? = 5
 if let y = x
@@ -37,7 +37,7 @@ Optionals may be unwrapped with optional chaining. See the section *What is opti
 
 
 * Using nil-coalescing operator
-For example:
+For example:  
 ```
 var x: String? = "Hello World"
 print("\(x ?? "Water")")
